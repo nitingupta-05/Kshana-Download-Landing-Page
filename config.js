@@ -10,7 +10,7 @@ const CONFIG = {
 
     // Download Links
     downloads: {
-        direct: 'https://github.com/nitingupta-05/Kshana-Download-Landing-Page/raw/main/downloads/Kshana.apk',
+        direct: "https://github.com/nitingupta-05/Kshana-Download-Landing-Page/raw/main/downloads/Kshana.apk",
         ios: 'https://apps.apple.com/app/kshana',
         android: 'https://play.google.com/store/apps/details?id=com.kshana',
         web: 'https://kshana.app',
