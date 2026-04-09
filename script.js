@@ -101,10 +101,17 @@ function scrollToFeatures() {
 
 // Download handler
 function downloadApp(platform) {
-    const directUrl = 'https://github.com/nitingupta-05/Kshana-Download-Landing-Page/raw/main/downloads/Kshana.apk';
-
     if (platform === 'direct') {
-        window.location.href = directUrl;
+        const apkPath = (typeof CONFIG !== 'undefined' && CONFIG.downloads && CONFIG.downloads.direct) 
+            ? CONFIG.downloads.direct 
+            : 'downloads/Kshana.apk';
+            
+        const link = document.createElement('a');
+        link.href = apkPath;
+        link.download = 'Kshana.apk';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
         logDownload(platform);
         return;
     }
