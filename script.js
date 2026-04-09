@@ -104,8 +104,10 @@ function downloadApp(platform) {
     if (platform === 'direct') {
         const apkPath = (typeof CONFIG !== 'undefined' && CONFIG.downloads && CONFIG.downloads.direct) 
             ? CONFIG.downloads.direct 
-            : 'downloads/Kshana.apk';
+            : 'https://github.com/nitingupta-05/Kshana-Download-Landing-Page/raw/main/downloads/Kshana.apk';
             
+        showToast('Starting your download...', 'success');
+        
         const link = document.createElement('a');
         link.href = apkPath;
         link.download = 'Kshana.apk';
@@ -116,8 +118,39 @@ function downloadApp(platform) {
         return;
     }
 
-    alert('Available soon');
+    showToast('Platform coming soon!', 'info');
 }
+
+// Toast Notification System
+function showToast(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.innerHTML = `
+        <div class="toast-content">
+            <span class="toast-icon">${type === 'success' ? '✅' : 'ℹ️'}</span>
+            <span class="toast-message">${message}</span>
+        </div>
+    `;
+    
+    let container = document.querySelector('.toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        document.body.appendChild(container);
+    }
+    
+    container.appendChild(toast);
+    
+    // Animate in
+    setTimeout(() => toast.classList.add('show'), 10);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
 
 // Log download attempts
 function logDownload(platform) {
