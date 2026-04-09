@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <title>Kshana - Relieve Your Moments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon"><img src="/images/logo.png"></span>
+                    <span class="logo-text">Kshana</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                </ul>
+                <div class="visitor-count">
+                    <span class="visitor-icon">👥</span>
+                    <span id="visitorCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Relieve Your Moments</h1>
+                    <p class="hero-subtitle">Connect, Share & Celebrate with Kshana</p>
+                    <p class="hero-description">
+                        Experience real-time messaging with a modern twist. Share stories, react to moments, 
+                        and stay connected with the people who matter most.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToDownload()">Get Started</button>
+                        <button class="btn btn-secondary" onclick="scrollToFeatures()">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img src="/images/home.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need for seamless communication</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Real-Time Messaging</h3>
+                    <p>Instant message delivery with live typing indicators and read receipts</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Stories</h3>
+                    <p>Share your moments with stories that disappear after 24 hours</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">😊</div>
+                    <h3>Reactions</h3>
+                    <p>React to messages with emojis - ❤️ 😂 😮 😢 👍 🔥</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Chat Themes</h3>
+                    <p>Customize your chat bubbles with beautiful color themes</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Disappearing Messages</h3>
+                    <p>Set messages to auto-delete after 30 seconds to 7 days</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Online Status</h3>
+                    <p>See who's online and their current mood in real-time</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Reply to Messages</h3>
+                    <p>Quote and reply to specific messages in conversations</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Notifications</h3>
+                    <p>Get notified about new messages and stories instantly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <p class="section-subtitle">Beautiful and intuitive user interface</p>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-frame">
+                        <img src="/images/conversation.jpg" />
+                    </div>
+                    <p class="screenshot-label">Chat Screen</p>
+                </div>
+
+                <div class="screenshot-item">
+                    <div class="screenshot-frame">
+                        <img src="/images/status.jpg" />
+                    </div>
+                    <p class="screenshot-label">Stories</p>
+                </div>
+
+                <div class="screenshot-item">
+                    <div class="screenshot-frame">
+                        <img src="/images/profile.jpg" alt="Profile">
+                    </div>
+                    <p class="screenshot-label">Profile</p>
+                </div>
+
+                <div class="screenshot-item">
+                    <div class="screenshot-frame">
+                        <img src="/images/notification.jpg" alt="Notification">
+                    </div>
+                    <p class="screenshot-label">Notifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2 class="section-title">Download Kshana</h2>
+            <p class="section-subtitle">Get the app on your device</p>
+
+            <div class="download-buttons">
+                <button class="download-btn direct" onclick="downloadApp('direct')">
+                    <span class="download-icon">⬇️</span>
+                    <div class="download-text">
+                        <span class="download-label">Download</span>
+                        <span class="download-platform">APK Direct</span>
+                    </div>
+                </button>
+
+                <button class="download-btn ios" onclick="downloadApp('ios')">
+                    <span class="download-icon">🍎</span>
+                    <div class="download-text">
+                        <span class="download-label">Download on</span>
+                        <span class="download-platform">App Store</span>
+                    </div>
+                </button>
+
+                <button class="download-btn android" onclick="downloadApp('android')">
+                    <span class="download-icon">🤖</span>
+                    <div class="download-text">
+                        <span class="download-label">Get it on</span>
+                        <span class="download-platform">Google Play</span>
+                    </div>
+                </button>
+
+                <button class="download-btn web" onclick="downloadApp('web')">
+                    <span class="download-icon">🌐</span>
+                    <div class="download-text">
+                        <span class="download-label">Open</span>
+                        <span class="download-platform">Web Version</span>
+                    </div>
+                </button>
+            </div>
+
+            <div class="download-info">
+                <p>✨ Free to download • No ads • Privacy focused</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+    <div class="container">
+        <h2 class="section-title">Join Our Community</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalVisitors">0</div>
+                <div class="stat-label">Total Visitors</div>
+            </div>
+
+            <div class="stat-card">
+                <img src="/images/nsg_05_qr.png" class="qr-image">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Kshana</h4>
+                    <p>Relieve your moments with real-time messaging and stories.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/nsg_05?igsh=NnRmbnVqaWxyODhu" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kshana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
