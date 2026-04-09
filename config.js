@@ -1,7 +1,3 @@
-/**
- * Kshana Website Configuration
- * Edit this file to customize your landing page
- */
 
 const CONFIG = {
     // App Information
@@ -14,7 +10,7 @@ const CONFIG = {
 
     // Download Links
     downloads: {
-        direct: 'https://kshana.app/download',
+        direct: './downloads/Kshana.apk',
         ios: 'https://apps.apple.com/app/kshana',
         android: 'https://play.google.com/store/apps/details?id=com.kshana',
         web: 'https://kshana.app',
