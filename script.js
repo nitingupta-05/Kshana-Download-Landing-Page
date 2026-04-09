@@ -101,18 +101,15 @@ function scrollToFeatures() {
 
 // Download handler
 function downloadApp(platform) {
-    const url = CONFIG.downloads[platform];
-    
-    // If your code has logic here that manipulates the 'url', 
-    // it is probably breaking the link.
-    
-    // CHANGE IT TO THIS:
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'Kshana.apk'); // Forces download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const directUrl = 'https://github.com/nitingupta-05/Kshana-Download-Landing-Page/raw/main/downloads/Kshana.apk';
+
+    if (platform === 'direct') {
+        window.location.href = directUrl;
+        logDownload(platform);
+        return;
+    }
+
+    alert('Available soon');
 }
 
 // Log download attempts
